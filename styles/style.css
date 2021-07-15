@@ -5,7 +5,10 @@
 ----------------*/
 body{
     font-family: 'Poppins', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
 }
+
 
 .flexible-container{
     display: flex;
@@ -19,6 +22,7 @@ body{
     background-color: #2D25A0;
     width: 1540px;
     height: 677px;
+    overflow: hidden;
 }
 h1{
     position: absolute;
@@ -305,6 +309,11 @@ color: black;
 
 @media only screen and (max-width:688px) {
   
+    *{
+       
+   overflow-x: hidden !important;
+
+    }
     .banner{
         display: flex;
         flex-direction: column;
@@ -312,30 +321,31 @@ color: black;
         
     }
    .banner h1{
-    width: 278px;
-    height: 138px;
-    left: 16px;
-    top: 112px;
-    font-size: 36px;
-line-height: 50px;
+        width: 100%;
+        height: 138px;
+        left: 16px;
+        top: 112px;
+        font-size: 36px;
+        line-height: 50px;
    }
    .link-button{
-    position: absolute;
-    width: 141px;
-    height: 24px;
-    left: 24px;
-    margin-left: -11px;
-    top: 259px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
+        position: absolute;
+        width: 141px;
+        height: 24px;
+        left: 24px;
+        margin-left: -11px;
+        top: 259px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
    }
    .banner img{
-    width: 329px;
-    height: 259.17px;
-    left: 344px;
-    padding-top: 200px;
-    margin-left: 8px;
+        width: 100%;
+        height: 259.17px;
+        left: 344px;
+        padding-top: 200px;
+        margin-left: 8px;
+
    }
 
     .players, .players-second-row{
@@ -345,16 +355,27 @@ line-height: 50px;
         margin-left: 15px;
         margin-right: 15px;
     }
-    .match-highlight-info, .bonus{
+    .match-highlight-info{
         
         display: none;
+    }
+    .shop{
+        width: 100%;
+        grid-template-columns: repeat(1,1fr);
+        flex-direction: column;
+    }
+    .jersey{
+        margin-left: 26px;
+    }
+    .subscribe{
+        width: 100%;
+        margin-left: 12px;
     }
     .match-highlight img{
         display: none;
     }
     
     footer{
-        
         width: 100%;
         flex-direction: column;
         justify-content: center;
@@ -367,18 +388,71 @@ line-height: 50px;
 
 /*tablet devices*/
 @media only screen and (min-width: 688px) and (max-width:992px){
-    .players, .players-second-row{
-        grid-template-columns: repeat(3,1fr);
+    
+    *{
+       
+        overflow-x: hidden !important;
+     
+         }
+    .banner{
+        display: flex;
         flex-direction: column;
+        width: 100%;
+        
+    }
+    .banner h1{
+        width: 100%;
+        height: 138px;
+        left: 16px;
+        top: 112px;
+        font-size: 36px;
+        line-height: 50px;
+   }
+   .link-button{
+    position: absolute;
+    width: 141px;
+    height: 24px;
+    left: 24px;
+    margin-left: -11px;
+    top: 170px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+.banner img{
+    height: 347px;
+    width: 600px;
+    left: 344px;
+    padding-top: 200px;
+    margin-left: 8px;
+
+}
+   .players{
+       width: 30%;
+   }
+   .players-second-row{
+       width: 30%;
+   }
+    .players, .players-second-row{
+        width: 100%;
         margin-left: 40px;
         margin-right: 15px;
     }
-    .match-highlight-info{
+    .match-highlight-info, .match-highlight-info{
         
         display: none;
     }
     .match-highlight img{
         display: none;
+    }
+    .subscribe{
+        width: 100%;
+        margin-left: 12px;
+    }
+    .shop{
+        width: 100%;
+        grid-template-columns: repeat(1,1fr);
+        flex-direction: column;
     }
     footer{
         width: 100%;
